@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30523.141
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebExam", "WebExam\WebExam.csproj", "{5CB672B0-9F74-4F5B-BD07-4977E0683AC7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebExam.Tests", "WebExam.Tests\WebExam.Tests.csproj", "{BA566048-7118-4C6C-A26E-7751C9D20024}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5CB672B0-9F74-4F5B-BD07-4977E0683AC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CB672B0-9F74-4F5B-BD07-4977E0683AC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CB672B0-9F74-4F5B-BD07-4977E0683AC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CB672B0-9F74-4F5B-BD07-4977E0683AC7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA566048-7118-4C6C-A26E-7751C9D20024}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA566048-7118-4C6C-A26E-7751C9D20024}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA566048-7118-4C6C-A26E-7751C9D20024}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA566048-7118-4C6C-A26E-7751C9D20024}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0335ABDF-C91C-4505-91B5-950D46AAAB64}
+	EndGlobalSection
+EndGlobal
