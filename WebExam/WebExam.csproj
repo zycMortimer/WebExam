@@ -141,6 +141,10 @@
     <Compile Include="Migrations\202010151403244_initialSeedData.designer.cs">
       <DependentUpon>202010151403244_initialSeedData.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202010160148089_EmployeeDataAnnotations.cs" />
+    <Compile Include="Migrations\202010160148089_EmployeeDataAnnotations.designer.cs">
+      <DependentUpon>202010160148089_EmployeeDataAnnotations.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\CmsContext.cs" />
     <Compile Include="Models\Employee.cs" />
@@ -289,6 +293,7 @@
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\Employees\Details.cshtml" />
     <Content Include="Views\Employees\Create.cshtml" />
+    <Content Include="Views\Employees\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -301,6 +306,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202010151403244_initialSeedData.resx">
       <DependentUpon>202010151403244_initialSeedData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010160148089_EmployeeDataAnnotations.resx">
+      <DependentUpon>202010160148089_EmployeeDataAnnotations.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
