@@ -102,5 +102,48 @@ namespace WebExam.Controllers
             //若未通過驗證，返回Form，直到正確
             return View(emp);
         }
+
+        public ActionResult Delete(int? Id)
+        {
+            //檢查是否有員工Id
+            if (Id == null)
+            {
+                return Content("查無資料，請提供員工編號");
+            }
+
+            //以Id 找尋員工資料
+            Employee emp = db.Employees.Find(Id);
+
+            //如果沒有找到員工，回傳HttpNotFound
+            if (emp == null)
+            {
+                return HttpNotFound();
+            }
+
+            return View(emp);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]  //防止跨網站的請求攻擊
+        public ActionResult Delete(int Id)  //Endit=>負責處理Post的Action，Bind指定想要改變的欄位也防止over-posting攻擊
+        {
+            //以Id找尋Entity，然後刪除
+            Employee emp = db.Employees.Find(Id);
+           
+            db.Employees.Remove(emp);
+            db.SaveChanges();
+            
+            return RedirectToAction("Index");
+        }
+
+        //關閉db連線，並釋放資源，下此使用必須在new一個實體
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                db.Dispose();
+            }
+            base.Dispose(disposing);
+        }
     }
 }

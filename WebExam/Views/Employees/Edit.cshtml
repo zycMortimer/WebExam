@@ -15,6 +15,7 @@
         <h4>Employee Edit</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <!--編輯需要Id-->
         @Html.HiddenFor(model => model.Id)
 
         <div class="form-group">

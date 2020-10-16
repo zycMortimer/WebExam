@@ -28,6 +28,11 @@
                 x => x.Id,
                 new Register { Id = 1, Name = "奚江華", Nickname = "聖殿祭司", Password = "myPassword*", Email = "dotnetcool@gmail.com", City = 4, Gender = 1, Commutermode = "1", Comment = "Nothing", Terms = true }
                 );
+
+            context.Accounts.AddOrUpdate(
+                x => x.Account,
+                new Accounts { Account = "test123", Password = "test123" }
+                ); 
         }
     }
 }
