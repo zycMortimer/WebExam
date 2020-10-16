@@ -1,0 +1,36 @@
+﻿@model WebExam.Models.Post
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Post</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PostTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PostTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PostContent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PostContent)
+        </dd>
+
+    </dl>
+</div>
+
+
+<p>
+    @Html.ActionLink("Run", "redirectRunTitle", new { title = Model.PostTitle }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
