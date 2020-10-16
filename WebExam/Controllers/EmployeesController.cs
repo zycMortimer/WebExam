@@ -5,6 +5,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using WebExam.Models;
+using System.Data.Entity;
 
 namespace WebExam.Controllers
 {
@@ -37,8 +38,28 @@ namespace WebExam.Controllers
             {
                 return HttpNotFound();
             }
+            return View(emp);
+        }
 
+        public ActionResult Create()
+        {
+            return View();
+        }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create([Bind(Include = "Id,Name,Mobile,Email,Department,Title")] Employee emp)  //Creat=>負責處理Post的Action，Bind指定想要改變的欄位也防止over-posting攻擊
+        {
+            if (ModelState.IsValid)
+            {
+                //通過驗證，將資料存到資料庫
+                db.Employees.Add(emp);
+                db.SaveChanges();
+                //儲存完成後回到Employees的Index頁面
+                return RedirectToAction("Index");
+            }
+
+            //若未通過驗證，返回Form，直到正確
             return View(emp);
         }
     }
