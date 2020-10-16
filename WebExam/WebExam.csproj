@@ -182,10 +182,16 @@
     <Compile Include="Migrations\202010160253514_AccountDataAnnotations2.designer.cs">
       <DependentUpon>202010160253514_AccountDataAnnotations2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202010160702289_DataAnnotations.cs" />
+    <Compile Include="Migrations\202010160702289_DataAnnotations.designer.cs">
+      <DependentUpon>202010160702289_DataAnnotations.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Accounts.cs" />
+    <Compile Include="Models\Book.cs" />
     <Compile Include="Models\CmsContext.cs" />
     <Compile Include="Models\Employee.cs" />
+    <Compile Include="Models\Post.cs" />
     <Compile Include="Models\Register.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -358,6 +364,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202010160253514_AccountDataAnnotations2.resx">
       <DependentUpon>202010160253514_AccountDataAnnotations2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010160702289_DataAnnotations.resx">
+      <DependentUpon>202010160702289_DataAnnotations.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

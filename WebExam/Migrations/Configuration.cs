@@ -32,7 +32,18 @@
             context.Accounts.AddOrUpdate(
                 x => x.Account,
                 new Accounts { Account = "test123", Password = "test123" }
-                ); 
+                );
+
+            context.Books.AddOrUpdate(
+                x => x.BookId,
+                new Book { BookId = 1, BookName = "SQL Server 2016 設計實務",BookContent="學習SQL" }
+                );
+            
+            context.Posts.AddOrUpdate(
+                x => x.PostId,
+                new Post { PostId = 1, PostTitle = "印星星",PostContent ="用for印星星" }
+                );
+
         }
     }
 }

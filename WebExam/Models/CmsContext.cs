@@ -13,5 +13,7 @@ namespace WebExam.Models
         public DbSet<Employee> Employees { get; set; }
         public DbSet<Register> Registers { get; set; }
         public DbSet<Accounts> Accounts { get; set; }
+        public DbSet<Book> Books { get; set; }
+        public DbSet<Post> Posts { get; set; }
     }
 }
