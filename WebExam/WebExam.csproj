@@ -193,6 +193,30 @@
     <Compile Include="Migrations\202010160713527_DataAnnotations1.designer.cs">
       <DependentUpon>202010160713527_DataAnnotations1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202010160854382_DataAnnotations2.cs" />
+    <Compile Include="Migrations\202010160854382_DataAnnotations2.designer.cs">
+      <DependentUpon>202010160854382_DataAnnotations2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202010160909333_BookDataAnnotations.cs" />
+    <Compile Include="Migrations\202010160909333_BookDataAnnotations.designer.cs">
+      <DependentUpon>202010160909333_BookDataAnnotations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202010160952579_RegisterDataAnnotations.cs" />
+    <Compile Include="Migrations\202010160952579_RegisterDataAnnotations.designer.cs">
+      <DependentUpon>202010160952579_RegisterDataAnnotations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202010171349508_PostDataAnnotations.cs" />
+    <Compile Include="Migrations\202010171349508_PostDataAnnotations.designer.cs">
+      <DependentUpon>202010171349508_PostDataAnnotations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202010171431368_PostDataAnnotations1.cs" />
+    <Compile Include="Migrations\202010171431368_PostDataAnnotations1.designer.cs">
+      <DependentUpon>202010171431368_PostDataAnnotations1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202010171434109_PostDataAnnotations2.cs" />
+    <Compile Include="Migrations\202010171434109_PostDataAnnotations2.designer.cs">
+      <DependentUpon>202010171434109_PostDataAnnotations2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Accounts.cs" />
     <Compile Include="Models\Book.cs" />
@@ -203,17 +227,16 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\bootstrap-grid.css" />
-    <Content Include="Content\bootstrap-grid.min.css" />
-    <Content Include="Content\bootstrap-reboot.css" />
-    <Content Include="Content\bootstrap-reboot.min.css" />
+    <Content Include="Assets\images\SQL2016.jpg" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Scripts\bootstrap.bundle.js" />
-    <Content Include="Scripts\bootstrap.bundle.min.js" />
+    <Content Include="HtmlPage\BootstrapSyntax.html" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\esm\popper-utils.js" />
@@ -225,16 +248,14 @@
     <Content Include="Scripts\esm\popper.js.map" />
     <Content Include="Scripts\esm\popper-utils.min.js.map" />
     <Content Include="Scripts\esm\popper-utils.js.map" />
-    <Content Include="Scripts\bootstrap.min.js.map" />
-    <Content Include="Scripts\bootstrap.js.map" />
-    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
-    <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\bootstrap.min.css.map" />
     <Content Include="Content\bootstrap.css.map" />
-    <Content Include="Content\bootstrap-reboot.min.css.map" />
-    <Content Include="Content\bootstrap-reboot.css.map" />
-    <Content Include="Content\bootstrap-grid.min.css.map" />
-    <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -250,6 +271,7 @@
     <Content Include="Scripts\popper-utils.min.js" />
     <Content Include="Scripts\popper.js" />
     <Content Include="Scripts\popper.min.js" />
+    <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\src\index.js" />
     <Content Include="Scripts\src\methods\defaults.js" />
     <Content Include="Scripts\src\methods\destroy.js" />
@@ -358,6 +380,9 @@
     <Content Include="Views\Posts\Edit.cshtml" />
     <Content Include="Views\Posts\Index.cshtml" />
     <Content Include="Views\RunProgram\Run.cshtml" />
+    <Content Include="Views\RunProgram\Index.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\RunProgram\FtoC.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -388,6 +413,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202010160713527_DataAnnotations1.resx">
       <DependentUpon>202010160713527_DataAnnotations1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010160854382_DataAnnotations2.resx">
+      <DependentUpon>202010160854382_DataAnnotations2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010160909333_BookDataAnnotations.resx">
+      <DependentUpon>202010160909333_BookDataAnnotations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010160952579_RegisterDataAnnotations.resx">
+      <DependentUpon>202010160952579_RegisterDataAnnotations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010171349508_PostDataAnnotations.resx">
+      <DependentUpon>202010171349508_PostDataAnnotations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010171431368_PostDataAnnotations1.resx">
+      <DependentUpon>202010171431368_PostDataAnnotations1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010171434109_PostDataAnnotations2.resx">
+      <DependentUpon>202010171434109_PostDataAnnotations2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

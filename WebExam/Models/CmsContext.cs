@@ -8,6 +8,12 @@ namespace WebExam.Models
 {
     public class CmsContext: DbContext
     {
+        /*
+              Enable-Migrations                     啟動Migrations
+              Add-Migration PostDataAnnotations     新增修正檔Add-Migration [檔名]
+              Update-Database                       更新資料庫
+        */
+
         public CmsContext() : base("CmsDbConnection") { }
 
         public DbSet<Employee> Employees { get; set; }

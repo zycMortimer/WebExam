@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
 using WebExam.Models;
 
 namespace WebExam.Controllers
@@ -37,7 +38,8 @@ namespace WebExam.Controllers
 
         public ActionResult redirectRunTitle(string title)
         {
-            if (title == null)
+
+            if ( title == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }

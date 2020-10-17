@@ -46,7 +46,7 @@ namespace WebExam.Controllers
             }
 
 
-            return RedirectToAction("Index", "Home");
+            return Content($"<h2>登入成功</h2>", "text/html");
 
         }
 

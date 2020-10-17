@@ -17,5 +17,7 @@ namespace WebExam.Models
         public string PostTitle { get; set; }
 
         public string PostContent { get; set; }
+
+        public int PostNum { get; set; }
     }
 }

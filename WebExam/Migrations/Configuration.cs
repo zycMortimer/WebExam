@@ -26,7 +26,7 @@
 
             context.Registers.AddOrUpdate(
                 x => x.Id,
-                new Register { Id = 1, Name = "奚江華", Nickname = "聖殿祭司", Password = "myPassword*", Email = "dotnetcool@gmail.com", City = 4, Gender = 1, Commutermode = "1", Comment = "Nothing", Terms = true }
+                new Register { Id = 1, Name = "奚江華", Nickname = "聖殿祭司", Email = "dotnetcool@gmail.com", City = 4, Gender = 1, Commutermode = "1", Comment = "Nothing", Terms = true }
                 );
 
             context.Accounts.AddOrUpdate(
@@ -36,12 +36,14 @@
 
             context.Books.AddOrUpdate(
                 x => x.BookId,
-                new Book { BookId = 1, BookName = "SQL Server 2016 設計實務",BookContent="學習SQL" }
+                new Book { BookId = 1, BookName = "SQL Server 2016 設計實務",BookContent="學習SQL"}
                 );
             
             context.Posts.AddOrUpdate(
                 x => x.PostId,
-                new Post { PostId = 1, PostTitle = "印星星",PostContent ="用for印星星" }
+                new Post { PostId = 1, PostTitle = "印星星",PostContent ="用for印星星",PostNum = 0 },
+                new Post { PostId = 2, PostTitle = "華氏轉攝氏", PostContent = "華氏轉攝氏", PostNum = 1 },
+                new Post { PostId = 3, PostTitle = "圓面積", PostContent = "計算圓面積", PostNum = 1 }
                 );
 
         }
