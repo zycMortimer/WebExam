@@ -384,6 +384,7 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\RunProgram\FtoC.cshtml" />
     <Content Include="Views\RunProgram\CircularArea.cshtml" />
+    <Content Include="Views\RunProgram\FinalCode.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

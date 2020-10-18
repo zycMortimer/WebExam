@@ -44,6 +44,17 @@ namespace WebExam.Controllers
             return View();
         }
 
+        public ActionResult FinalCode()
+        {
+            //ViewBag.FinalCodeError = "";
+            ViewBag.FinalCodeMax = 100;
+            ViewBag.FinalCodeMin = 1;
+            Random R = new Random();
+            ViewBag.FinalCodeAns = R.Next(1,100);
+
+            return View();
+        }
+
         protected ActionResult SwitchProgram(string title)
         {
             TempData["Title"] = title;
@@ -57,6 +68,8 @@ namespace WebExam.Controllers
                     return RedirectToAction("FtoC");
                 case "圓面積":
                     return RedirectToAction("CircularArea");
+                case "終極密碼":
+                    return RedirectToAction("FinalCode");
                 default:
                     return Content("<h2>還沒寫出來</h2>", "text/html"); 
             }
@@ -106,6 +119,54 @@ namespace WebExam.Controllers
 
 
             return Content("<h2>圓面積：" + area.ToString() + "</h>", "text/html");
+        }
+
+        [HttpPost]
+        public ActionResult FinalCode(string Code ,string Ans,string Max,string Min)
+        {
+            int ans, code,max,min;
+            
+            int.TryParse(Ans, out ans);
+            int.TryParse(Max, out max);
+            int.TryParse(Min, out min);
+           
+            if (!int.TryParse(Code, out code))
+            {
+                ViewBag.FinalCodeAns = ans.ToString();
+                ViewBag.FinalCodeMax = max.ToString();
+                ViewBag.FinalCodeMin = min.ToString();
+                ViewBag.FinalCodeError = "請輸入數字";
+                return View();
+            }
+            
+            if (code > max || code < min)
+            {
+                ViewBag.FinalCodeAns = ans.ToString();
+                ViewBag.FinalCodeMax = max.ToString();
+                ViewBag.FinalCodeMin = min.ToString();
+                ViewBag.FinalCodeError = "請輸入範圍內的數字";
+                return View();
+            }
+            else if (code == ans)
+            {
+                return Content("<h2>終極密碼：" + ans.ToString() + "</h2><h3>你猜對了!!!</h3>", "text/html");
+            }
+            else if (code < ans)
+            {
+                min = code;
+                ViewBag.FinalCodeAns = ans.ToString();
+                ViewBag.FinalCodeMax = max.ToString();
+                ViewBag.FinalCodeMin = min.ToString();
+                return View();
+            }
+            else
+            {
+                max = code;
+                ViewBag.FinalCodeAns = ans.ToString();
+                ViewBag.FinalCodeMax = max.ToString();
+                ViewBag.FinalCodeMin = min.ToString();
+                return View();
+            }
         }
     }
 }

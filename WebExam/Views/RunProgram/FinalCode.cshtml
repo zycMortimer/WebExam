@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "終極密碼";
+}
+
+<h2>終極密碼</h2>
+<h3>請輸入 @ViewBag.FinalCodeMin ~ @ViewBag.FinalCodeMax</h3>
+<h4> @ViewBag.FinalCodeError </h4>
+<!-- 變數的name 要跟 Controller裡的Function參數名稱一樣才能傳值 -->
+<form method="post" name="form" action="FinalCode">
+    <p>
+        密碼：<input type="text" name="Code">
+        <input type="hidden" name="Ans" value=@ViewBag.FinalCodeAns>
+        <input type="hidden" name="Max" value=@ViewBag.FinalCodeMax>
+        <input type="hidden" name="Min" value=@ViewBag.FinalCodeMin>
+    </p>
+    <input type="submit" name="Run">
+</form>
