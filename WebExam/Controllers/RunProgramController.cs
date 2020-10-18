@@ -39,6 +39,11 @@ namespace WebExam.Controllers
             return View();
         }
 
+        public ActionResult CircularArea()
+        {
+            return View();
+        }
+
         protected ActionResult SwitchProgram(string title)
         {
             TempData["Title"] = title;
@@ -50,6 +55,8 @@ namespace WebExam.Controllers
                     return Content(strHtml, "text/html");
                 case "華氏轉攝氏":
                     return RedirectToAction("FtoC");
+                case "圓面積":
+                    return RedirectToAction("CircularArea");
                 default:
                     return Content("<h2>還沒寫出來</h2>", "text/html"); 
             }
@@ -82,6 +89,23 @@ namespace WebExam.Controllers
 
 
             return Content("<h2>華氏：" + f.ToString() + "度</h>", "text/html");
+        }
+
+        [HttpPost]
+        public ActionResult CircularArea(string Diameter)
+        {
+            double area, diameter;
+            double PI = 3.14159;
+
+            if (!double.TryParse(Diameter, out diameter))
+            {
+                return Content("<h2>請輸入數字</h2>", "text/html");
+            }
+
+            area = Math.Pow((diameter/2),2)*PI;
+
+
+            return Content("<h2>圓面積：" + area.ToString() + "</h>", "text/html");
         }
     }
 }

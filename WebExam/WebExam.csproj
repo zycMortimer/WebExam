@@ -383,6 +383,7 @@
     <Content Include="Views\RunProgram\Index.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\RunProgram\FtoC.cshtml" />
+    <Content Include="Views\RunProgram\CircularArea.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
